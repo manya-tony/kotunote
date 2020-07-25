@@ -1,0 +1,46 @@
+.p-paginationWrap {
+    display: flex;
+    justify-content: center;
+}
+.p-pagination {
+    display: flex;
+    li {
+        a {
+            display: block;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            cursor: pointer;
+            color: $blue;
+            &:hover {
+                opacity: .5;
+                transition: opacity .3s;
+            }
+            &.active {
+                background: $gray;
+                font-weight: bold;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            &.disabled {
+                cursor: not-allowed;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.p-pagination__text {
+    color: $blue;
+    line-height: 1.6rem;
+}
+.p-pagination__icon {
+    font-size: 2rem;
+    line-height: 2rem;
+    transition: opacity .3s;
+    &:hover {
+        transition: opacity .3s;
+        opacity: .5;
+    }
+}

@@ -1,0 +1,32 @@
+.l-footer {
+    width: 100%;
+    padding: 0 10px;
+    margin-top: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+.l-footer__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include media(m) {
+        justify-content: center;
+        display: block;
+    }
+    li a {
+        font-size: 1.4rem;
+        margin-right: 3rem;
+        @include media(m) {
+            line-height: 3.4rem;
+            margin-right: 0;
+        }
+    }
+    li .l-footer__navLink {
+        margin-right: 0;
+    }
+}
+.l-footer__text {
+    font-size: 1rem;
+    box-sizing: border-box;
+}

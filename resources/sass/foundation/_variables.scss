@@ -1,0 +1,33 @@
+// Body
+$body-bg: #f2eedf;
+
+// Typography
+$font-family-sp: 'M PLUS Rounded 1c', sans-serif;
+$font-family: 'Noto Sans JP', 'Meiryo', sans-serif;
+$font-size-base: 62.5%;
+$line-height-base: 1.6rem;
+
+// Colors
+$white: #fdfdfd;
+$blue: #59bbd3;
+$red: #ff6133;
+$light-gray: #c9c9c9;
+$gray: #838383;
+$black: #1C1C1C;
+$twitter: #55acee;
+
+// BreakPoint
+$breakpoints: (
+    xs: "(max-width:376px)",
+    s: "(max-width:579px)",
+    m: "(max-width:769px)",
+    l: "(max-width:993px)",
+    xl: "(max-width:1150px)"
+);
+
+// MediaQueries
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

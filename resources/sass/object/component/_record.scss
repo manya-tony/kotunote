@@ -1,0 +1,157 @@
+.c-record {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    background: $white;
+    border-radius: 4rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    color: $gray;
+    transition: all .5s;
+    @include media(s) {
+        display: block;
+    }
+    &:hover {
+        cursor: pointer;
+        transition: all .5s;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+    .c-record__day {
+        flex: .7;
+        @include media(m) {
+            flex: 1;
+        }
+    }
+    .c-record__text {
+        flex: 4.3;
+        @include media(m) {
+            flex: 4;
+        }
+    }
+    &.-hovernone {
+        pointer-events: none;
+    }
+}
+.c-record__title {
+    color: $blue;
+}
+.c-record__icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: $twitter;
+    transition: all .5s;
+    &:hover {
+        cursor: pointer;
+        transition: all .5s;
+        font-size: 3rem;
+    }
+}
+.c-record__otherWrap {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.c-record__other {
+    width: 25%;
+    padding: .5rem;
+    box-sizing: border-box;
+    @include media(m) {
+        width: 33.3%;
+    }
+    @include media(s) {
+        width: 50%;
+    }
+    @include media(xs) {
+        width: 100%;
+        padding: 0 0 1rem 0;
+    }
+    h4 {
+        font-size: 1.6rem;
+    }
+    a {
+        box-sizing: border-box;
+        background: $white;
+        border-radius: 30px;
+        display: block;
+        padding: 2rem;
+        transition: all .5s;
+        p {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        &:hover {
+            cursor: pointer;
+            transition: all .5s;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+        }
+    }
+}
+.c-record__other--textWrap {
+    text-align: center;
+}
+.c-record__link {
+    width: 15rem;
+    height: 15rem;
+    background: $blue;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    transition: all .5s;
+    p {
+        color: $white;
+        position: absolute;
+        top: 5rem;
+        left: 1.2rem;
+        @include media(s) {
+            top: 6rem;
+            left: 2rem;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        transition: all .5s;
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+}
+.c-record__link--top {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background: none;
+    border: 1px solid $blue;
+    i {
+        color: $blue;
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+}
+.c-record__none {
+    text-align: center;
+    i {
+        font-size: 10rem;
+        color: $blue;
+    }
+    p {
+        font-size: 2rem;
+    }
+}
+.c-record__sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+        padding: 0 1rem;
+    }
+}
