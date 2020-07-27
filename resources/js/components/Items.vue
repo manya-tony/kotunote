@@ -140,7 +140,7 @@
                 this.toTop = window.scrollY > 200
             },
             getItems() {
-                axios.get('/api/items/get/' + this.record.id)
+                axios.get('api/items/get/' + this.record.id)
                 .then(res => {
                     this.items = res.data
                     this.getYears()
@@ -171,7 +171,7 @@
                 }
             },
             addItem() {
-                axios.post('/api/items/store', {
+                axios.post('api/items/store', {
                     text : this.text,
                     record_id : this.record.id
                 })
@@ -185,7 +185,7 @@
                 });
             },
             updateItem() {
-                axios.put('/api/items/update/' + this.checkId, {
+                axios.put('api/items/update/' + this.checkId, {
                     text : this.checkText
                 })
                 .then(res => {
@@ -200,7 +200,7 @@
                 });
             },
             deleteItem() {
-                axios.delete('/api/items/delete/' + this.checkId)
+                axios.delete('api/items/delete/' + this.checkId)
                 .then(res => {
                     this.years = []
                     this.getItems()
