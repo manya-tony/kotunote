@@ -61,7 +61,7 @@
                     <i v-on:click="hideRecordModal" class="p-modal__close fas fa-times"></i>
                     <p class="u-mb__50">きろくを消去しますか？</p>
                     <!-- ボタン -->
-                    <form :action="`/records/${record.id}`" method="POST">
+                    <form :action="`/kotunote/records/${record.id}`" method="POST">
                         <div class="c-buttonWrap -side">
                             <button type="button" v-on:click="hideRecordModal" class="c-button -sideN -border u-mr__20"><a>いいえ</a></button>
                             <input type="hidden" name="_token" :value="csrf">
