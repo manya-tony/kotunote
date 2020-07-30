@@ -17,7 +17,7 @@
             </form>
             <!-- きろくへんしゅう -->
             <ul class="u-dp__flex u-mb__30">
-                <li class="u-mr__50"><a :href="`records/${record.id}/edit`">きろくの編集</a></li>
+                <li class="u-mr__50"><a :href="`/kotunote/records/${record.id}/edit`">きろくの編集</a></li>
                 <li v-on:click="showRecordModal"><a href="#">きろくの消去</a></li>
             </ul>
 
