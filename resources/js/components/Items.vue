@@ -18,7 +18,7 @@
             </form>
             <!-- きろくへんしゅう -->
             <ul class="u-dp__flex u-mb__30">
-                <li class="u-mr__50"><a :href="`/records/${record.id}/edit`">きろくの編集</a></li>
+                <li class="u-mr__50"><a :href="`/kotunote/records/${record.id}/edit`">きろくの編集</a></li>
                 <li v-on:click="showRecordModal"><a href="#">きろくの消去</a></li>
             </ul>
 
@@ -62,7 +62,7 @@
                     <i v-on:click="hideRecordModal" class="p-modal__close fas fa-times"></i>
                     <p class="u-mb__50">きろくを消去しますか？</p>
                     <!-- ボタン -->
-                    <form :action="`/records/${record.id}`" method="POST">
+                    <form :action="`/kotunote/records/${record.id}`" method="POST">
                         <div class="c-buttonWrap -side">
                             <button type="button" v-on:click="hideRecordModal" class="c-button -sideN -border u-mr__20"><a>いいえ</a></button>
                             <input type="hidden" name="_token" :value="csrf">
@@ -147,7 +147,7 @@
                 this.toTop = window.scrollY > 200
             },
             getItems() {
-                axios.get('/api/items/get/' + this.record.id)
+                axios.get('/kotunote/api/items/get/' + this.record.id)
                 .then(res => {
                     this.items = res.data
                     this.getYears()
@@ -178,7 +178,7 @@
                 }
             },
             addItem() {
-                axios.post('/api/items/store', {
+                axios.post('/kotunote/api/items/store', {
                     text : this.text,
                     record_id : this.record.id
                 })
@@ -192,7 +192,7 @@
                 });
             },
             updateItem() {
-                axios.put('/api/items/update/' + this.checkId, {
+                axios.put('/kotunote/api/items/update/' + this.checkId, {
                     text : this.checkText
                 })
                 .then(res => {
@@ -207,7 +207,7 @@
                 });
             },
             deleteItem() {
-                axios.delete('/api/items/delete/' + this.checkId)
+                axios.delete('/kotunote/api/items/delete/' + this.checkId)
                 .then(res => {
                     this.years = []
                     this.getItems()
