@@ -17,7 +17,7 @@
                 <!-- ボタン -->
                 <div class="c-buttonWrap -side">
                     <button type="button" class="c-button -sideN -border u-mr__20"><a href="{{ route('top') }}">もどる</a></button>
-                    <input type="submit" value="再送" class="c-button  -sideY">
+                    <input type="submit" value="さいそう" class="c-button  -sideY">
                 </div>
             </form>
         </div>

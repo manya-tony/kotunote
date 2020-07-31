@@ -13,7 +13,8 @@
         <form action="{{ route('mypage.profile.update') }}" method="POST" class="c-form">
             @csrf
             @method('put')
-            <input type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="ニックネームを入力（20文字以内）" maxlength="20" required class="u-mb__10 @if(!empty($errors->first('name'))) error @endif">
+            <p class="p-item__textCount u-mr__20 u-mb__5"><span class="js-nameLength">0</span>/20</p>
+            <input type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="ニックネームを入力（20文字以内）" maxlength="20" required class="u-mb__10 @if(!empty($errors->first('name'))) error @endif js-name">
             <input type="email" name="email" value="{{ old('email', $user->email) }}" placeholder="メールアドレスを入力" required class="u-mb__50 @if(!empty($errors->first('email'))) error @endif">
             <!-- エラーテキスト -->
             @if($errors->any())
@@ -31,3 +32,17 @@
         </form>
     </div>
 @endsection
+
+@push('script')
+<script>
+    $(function(){
+        var $name = $(".js-name"),
+            $nameLength = $(".js-nameLength");
+
+        $name.keyup(function(){
+            var count = $(this).val().length;
+            $nameLength.text(count);
+        })
+    });
+</script>
+@endpush

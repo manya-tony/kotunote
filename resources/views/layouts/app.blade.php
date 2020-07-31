@@ -119,5 +119,7 @@
         }, 5000);
     });
 </script>
+<!-- 各ページごとのscript -->
+@stack('script')
 </body>
 </html>

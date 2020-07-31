@@ -29,7 +29,7 @@
                 <!-- ボタン -->
                 <div class="c-buttonWrap -side">
                     <button type="button" class="c-button -sideN -border u-mr__10"><a href="{{ route('top') }}">もどる</a></button>
-                    <input type="submit" value="登録" class="c-button  -sideY">
+                    <input type="submit" value="とうろく" class="c-button  -sideY">
                 </div>
             </form>
         </div>

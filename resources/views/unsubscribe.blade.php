@@ -16,7 +16,7 @@
                 <!-- ボタン -->
                 <div class="c-buttonWrap -side">
                     <button type="button" class="c-button -sideN -border u-mr__20"><a href="{{ route('records.index') }}">もどる</a></button>
-                    <input type="submit" value="退会" class="c-button  -sideY">
+                    <input type="submit" value="たいかい" class="c-button  -sideY">
                 </div>
             </form>
         </div>

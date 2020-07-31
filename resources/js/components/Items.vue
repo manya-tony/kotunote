@@ -12,12 +12,13 @@
         <div class="p-container">
             <!-- きろくをついか -->
             <form class="c-form u-mb__30">
+                <p class="p-item__textCount u-mr__20 u-mb__5">{{ text.length }}/50</p>
                 <input type="text" name="item" v-model.trim="text" :class="{error:hasError}" placeholder="50文字以内" maxlength="50" required class="u-mb__20">
                 <button v-on:click="addItem" class="c-button -s">追加</button>
             </form>
             <!-- きろくへんしゅう -->
             <ul class="u-dp__flex u-mb__30">
-                <li class="u-mr__50"><a :href="`/kotunote/records/${record.id}/edit`">きろくの編集</a></li>
+                <li class="u-mr__50"><a :href="`/records/${record.id}/edit`">きろくの編集</a></li>
                 <li v-on:click="showRecordModal"><a href="#">きろくの消去</a></li>
             </ul>
 
@@ -61,7 +62,7 @@
                     <i v-on:click="hideRecordModal" class="p-modal__close fas fa-times"></i>
                     <p class="u-mb__50">きろくを消去しますか？</p>
                     <!-- ボタン -->
-                    <form :action="`/kotunote/records/${record.id}`" method="POST">
+                    <form :action="`/records/${record.id}`" method="POST">
                         <div class="c-buttonWrap -side">
                             <button type="button" v-on:click="hideRecordModal" class="c-button -sideN -border u-mr__20"><a>いいえ</a></button>
                             <input type="hidden" name="_token" :value="csrf">
@@ -83,13 +84,19 @@
                     <div class="c-buttonWrap">
                         <p class="u-mb__20">テキスト編集</p>
                         <form class="c-form u-mb__30">
+                            <p class="p-item__textCount u-mr__20 u-mb__5">{{ checkText.length }}/50</p>
                             <input v-model="checkText" type="text" name="item" placeholder="50文字以内" maxlength="50" required class="edit u-mb__10" :class="{error:hasError}">
-                            <button v-on:click="updateItem" class="c-button"><a>編集</a></button>
+                            <button v-on:click="updateItem" class="c-button -s"><a>編集</a></button>
                         </form>
                         <hr class="u-hr__dashed u-mb__30">
-                        <button class="c-button -twitter u-mb__30"><a :href="`http://twitter.com/share?text=【${record.record_name}のきろく】${checkText}`" target="__blank">ツイート</a></button>
-                        <hr class="u-hr__dashed u-mb__30">
-                        <button v-on:click="deleteItem" class="c-button -gray u-mb__30"><a>削除</a></button>
+                        <div class="p-item__modal--iconWrap u-mb__30">
+                            <div v-on:click="deleteItem" class="p-item__modal--icon -trash">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <a :href="`http://twitter.com/share?text=【${record.record_name}のきろく】%0a${checkText}%0a&url=https://chikichiki-tony.sakura.ne.jp/kotunote/items/${record.id}%0a&hashtags=今日もこつこつ`" target="__blank" class="p-item__modal--icon -twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div v-on:click="hideItemModal" class="p-modal__back"></div>
@@ -140,7 +147,7 @@
                 this.toTop = window.scrollY > 200
             },
             getItems() {
-                axios.get('/kotunote/api/items/get/' + this.record.id)
+                axios.get('/api/items/get/' + this.record.id)
                 .then(res => {
                     this.items = res.data
                     this.getYears()
@@ -171,7 +178,7 @@
                 }
             },
             addItem() {
-                axios.post('/kotunote/api/items/store', {
+                axios.post('/api/items/store', {
                     text : this.text,
                     record_id : this.record.id
                 })
@@ -185,7 +192,7 @@
                 });
             },
             updateItem() {
-                axios.put('/kotunote/api/items/update/' + this.checkId, {
+                axios.put('/api/items/update/' + this.checkId, {
                     text : this.checkText
                 })
                 .then(res => {
@@ -200,7 +207,7 @@
                 });
             },
             deleteItem() {
-                axios.delete('/kotunote/api/items/delete/' + this.checkId)
+                axios.delete('/api/items/delete/' + this.checkId)
                 .then(res => {
                     this.years = []
                     this.getItems()

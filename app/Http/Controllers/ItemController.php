@@ -18,7 +18,9 @@ class ItemController extends Controller
     public function index($id)
     {
         $user_id = Auth::id();
-        $record = Record::where('id', $id)->first();
+        $record = Record::where('id', $id)
+                    ->with('user:id,name')            
+                    ->first();
         
         if($record && $record->user_id === $user_id) {
 
