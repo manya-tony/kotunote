@@ -26,13 +26,13 @@ class RecordsTableSeeder extends Seeder
         DB::table('records')->insert([
             'record_name' => '映画',
             'user_id' => 1,
-            'release' => false,
+            'release' => true,
             'created_at' => '2017-01-01 01:00:00',
             'updated_at' => '2017-01-01 01:00:00'
         ]);
 
         DB::table('records')->insert([
-            'record_name' => 'ゲーム',
+            'record_name' => 'ささみどれくらい食べたか',
             'user_id' => 2,
             'release' => true,
             'created_at' => '2017-01-01 01:00:00',
@@ -40,8 +40,24 @@ class RecordsTableSeeder extends Seeder
         ]);
 
         DB::table('records')->insert([
-            'record_name' => 'ちゅな語録',
+            'record_name' => '本日の大特価',
             'user_id' => 3,
+            'release' => true,
+            'created_at' => '2017-01-01 01:00:00',
+            'updated_at' => '2017-01-01 01:00:00'
+        ]);
+
+        DB::table('records')->insert([
+            'record_name' => '筋トレ',
+            'user_id' => 4,
+            'release' => true,
+            'created_at' => '2017-01-01 01:00:00',
+            'updated_at' => '2017-01-01 01:00:00'
+        ]);
+
+        DB::table('records')->insert([
+            'record_name' => 'お菓子',
+            'user_id' => 5,
             'release' => true,
             'created_at' => '2017-01-01 01:00:00',
             'updated_at' => '2017-01-01 01:00:00'

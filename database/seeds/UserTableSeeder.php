@@ -26,8 +26,8 @@ class UserTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'ひこ',
-            'email' => 'hiko@test.com',
+            'name' => 'ささみ',
+            'email' => 'sasami@test.com',
             'email_verified_at' => '2017-01-01 00:00:00',
             'password' => Hash::make('test1234'),
             'remember_token' => '',
@@ -36,8 +36,28 @@ class UserTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'ちゅな',
-            'email' => 'chuna@test.com',
+            'name' => 'おさしみ',
+            'email' => 'osashimi@test.com',
+            'email_verified_at' => '2017-01-01 00:00:00',
+            'password' => Hash::make('test1234'),
+            'remember_token' => '',
+            'created_at' => '2017-01-01 00:00:00',
+            'updated_at' => '2017-01-01 00:00:00',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'うまみ',
+            'email' => 'umami@test.com',
+            'email_verified_at' => '2017-01-01 00:00:00',
+            'password' => Hash::make('test1234'),
+            'remember_token' => '',
+            'created_at' => '2017-01-01 00:00:00',
+            'updated_at' => '2017-01-01 00:00:00',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'あまみ',
+            'email' => 'amami@test.com',
             'email_verified_at' => '2017-01-01 00:00:00',
             'password' => Hash::make('test1234'),
             'remember_token' => '',
