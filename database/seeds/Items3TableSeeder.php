@@ -18,7 +18,7 @@ class Items3TableSeeder extends Seeder
         for($i=1; $i<11; $i++) {
             DB::table('items')->insert([
                 'text' => 'ささみ '.$i.'00グラム',
-                'record_id' => 3,
+                'record_id' => 6,
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);
@@ -26,15 +26,7 @@ class Items3TableSeeder extends Seeder
         for($i=1; $i<11; $i++) {
             DB::table('items')->insert([
                 'text' => 'サーモン '.$i.'0円',
-                'record_id' => 3,
-                'created_at' => $now,
-                'updated_at' => $now,
-            ]);
-        }
-        for($i=1; $i<11; $i++) {
-            DB::table('items')->insert([
-                'text' => 'サーモン '.$i.'0円',
-                'record_id' => 3,
+                'record_id' => 7,
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);
@@ -42,7 +34,7 @@ class Items3TableSeeder extends Seeder
         for($i=1; $i<11; $i++) {
             DB::table('items')->insert([
                 'text' => 'デッドリフト'.$i,
-                'record_id' => 4,
+                'record_id' => 8,
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);
@@ -50,7 +42,7 @@ class Items3TableSeeder extends Seeder
         for($i=1; $i<11; $i++) {
             DB::table('items')->insert([
                 'text' => 'ピノ'.$i.'こ',
-                'record_id' => 4,
+                'record_id' => 9,
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);
