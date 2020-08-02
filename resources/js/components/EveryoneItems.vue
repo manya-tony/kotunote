@@ -5,12 +5,9 @@
             <h2 class="u-mb__10">{{ record.record_name }}</h2>
             <h3 class="u-mb__20">のきろく</h3>
             <p>こつこつ数：{{ items.length }}</p>
-            <form action="/kotunote/everyone/user" method="POST" name="user">
-                <input type="hidden" name="user_id" :value="record.user_id">
-                <p>ユーザー名：
-                    <a href="javascript:user.submit()" class="u-hover">{{ record.user.name }}</a>
-                </p>
-            </form>
+            <p>ユーザー名：
+                <a href="/kotunote/everyone/user, ['user_id' => {{ record.user_id }}]" class="u-hover">{{ record.user.name }}</a>
+            </p>
         </div>
 
         <div class="p-container">
