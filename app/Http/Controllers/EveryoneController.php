@@ -59,12 +59,12 @@ class EveryoneController extends Controller
      */
     public function user(Request $request)
     {
-        $user = User::where('id', Crypt::decrypt($request->user_id))
+        $user = User::where('id', $request->user_id)
                     ->select('id', 'name')
                     ->first();
 
         if($user) {
-            $records = Record::where('user_id', Crypt::decrypt($request->user_id))
+            $records = Record::where('user_id', $request->user_id)
                         ->select('id', 'record_name')
                         ->get();
     
