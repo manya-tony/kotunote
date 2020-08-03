@@ -64,7 +64,7 @@ class UserController extends Controller
             }
         }
 
-        return redirect()->route('records.index')->with('flash_message', 'プロフィールをへんこうしました');
+        return redirect()->route('records.index')->with('flash_message', 'プロフィールを変更しました');
     }
 
     /**
@@ -84,7 +84,7 @@ class UserController extends Controller
             // レコードを削除
             EmailReset::where('token', $token)->delete();
 
-            return redirect()->route('records.index')->with('flash_message', 'メールアドレスをへんこうしました');
+            return redirect()->route('records.index')->with('flash_message', 'メールアドレスを変更しました');
 
         } else {
 
@@ -93,7 +93,7 @@ class UserController extends Controller
                 EmailReset::where('token', $token)->delete();
             }
 
-            return redirect()->route('records.index')->with('flash_message', 'メールアドレスのへんこうに失敗しました');
+            return redirect()->route('records.index')->with('flash_message', 'メールアドレスの変更に失敗しました');
         
         }
     }
@@ -129,7 +129,7 @@ class UserController extends Controller
         // メール送信
         $user->sendPasswordUpdateNotification();
 
-        return redirect()->route('records.index')->with('flash_message', 'パスワードをへんこうしました');
+        return redirect()->route('records.index')->with('flash_message', 'パスワードを変更しました');
     }
 
     /**

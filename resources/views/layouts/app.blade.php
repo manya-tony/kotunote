@@ -57,7 +57,7 @@
                 <!-- ナビゲーション ろぐいん前-->
                 <ul class="l-header__nav">
                     <li class="u-mr__40"><a href="{{ route('login') }}" class="u-hover">ろぐいん</a></li>
-                    <li><a href="{{ route('register') }}" class="u-hover">しんきとうろく</a></li>
+                    <li><a href="{{ route('register') }}" class="u-hover">ゆーざー登録</a></li>
                 </ul>
             @endif
         </header>

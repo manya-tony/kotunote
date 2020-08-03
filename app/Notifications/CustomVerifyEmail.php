@@ -34,7 +34,7 @@ class CustomVerifyEmail extends VerifyEmail
     {
         return (new MailMessage)
                     ->subject('本登録をお願いいたします | '.config('app.name'))
-                    ->line('本登録のご連絡です。以下のURLにアクセスして本登録を完了してください。')
+                    ->line('本登録のご連絡です。以下のボタンから本登録を完了してください。')
                     ->action('本登録', $this->verificationUrl($notifiable))
                     ->line('※お心当たりのない場合は削除してください。');
     }

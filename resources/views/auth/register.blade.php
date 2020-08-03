@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'しんきとうろく')
+@section('title', 'ゆーざー登録')
 
 @section('content')
     <!-- タイトル -->
     <div class="c-titleWrap u-mb__50">
-            <h2 class="u-mb__50">しんきとうろく</h2>
+            <h2 class="u-mb__50">ゆーざー登録</h2>
             <!-- 注意文 -->
             <p>※すべての項目を入力してください</p>
         </div>

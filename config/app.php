@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'kotunote.test'),
+    'url' => env('APP_URL', ''),
 
     'asset_url' => env('ASSET_URL', null),
 

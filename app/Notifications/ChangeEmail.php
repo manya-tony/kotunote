@@ -44,7 +44,7 @@ class ChangeEmail extends Notification
     {
         return (new MailMessage)
                     ->subject('メールアドレス変更 | '.config('app.name'))
-                    ->line('メールアドレス変更のご連絡です。以下のURLにアクセスして手続きを完了してください。')
+                    ->line('メールアドレス変更のご連絡です。以下のボタンから手続きを完了してください。')
                     ->action('メールアドレス変更', url('mypage/reset', $this->token))
                     ->line('※有効期限は60分です。')
                     ->line('※有効期限が切れた場合はもう一度はじめからからお手続きを行ってください。');

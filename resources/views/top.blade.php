@@ -15,10 +15,10 @@
                 <button class="c-button"><a href="{{ route('login') }}">ろぐいん</a></button>
             </li>
             <li class="u-mb__20">
-                <button class="c-button"><a href="{{ route('register') }}">しんきとうろく</a></button>
+                <button class="c-button"><a href="{{ route('register') }}">ゆーざー登録</a></button>
             </li>
             <li>
-                <button class="c-button"><a href="{{ route('everyone.records') }}">みんなのきろくをみる</a></button>
+                <button class="c-button"><a href="{{ route('everyone.records') }}">みんなのきろく</a></button>
             </li>
         </ul>
     </section>
