@@ -46,7 +46,7 @@
                             <h3 class="u-mb__5">{{ $record->record_name }}</h3>
                             <h4 class="u-mb__5">のきろく</h4>
                         </div>
-                        <p>ユーザー名：{{ $record->user->name }}</p>
+                        <p>ゆーざー名：{{ $record->user->name }}</p>
                         <p>こつこつ数：{{ count($record->items) }}</p>
                         <p>最終更新日：{{ $record->updated_at }}</p>
                     </a>

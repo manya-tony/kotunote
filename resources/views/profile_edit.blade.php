@@ -14,8 +14,8 @@
             @csrf
             @method('put')
             <p class="p-item__textCount u-mr__20 u-mb__5"><span class="js-nameLength">0</span>/20</p>
-            <input type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="ニックネームを入力（20文字以内）" maxlength="20" required class="u-mb__10 @if(!empty($errors->first('name'))) error @endif js-name">
-            <input type="email" name="email" value="{{ old('email', $user->email) }}" placeholder="メールアドレスを入力" required class="u-mb__50 @if(!empty($errors->first('email'))) error @endif">
+            <input type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="にっくねーむを入力（20文字以内）" maxlength="20" required class="u-mb__10 @if(!empty($errors->first('name'))) error @endif js-name">
+            <input type="email" name="email" value="{{ old('email', $user->email) }}" placeholder="めーるあどれすを入力" required class="u-mb__50 @if(!empty($errors->first('email'))) error @endif">
             <!-- エラーテキスト -->
             @if($errors->any())
                 <ul class="c-error u-mb__50">

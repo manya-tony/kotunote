@@ -12,9 +12,9 @@
         <form action="{{ route('mypage.password.update') }}" method="POST" class="c-form">
             @csrf
             @method('put')
-            <input type="password" name="current_password" placeholder="現在のパスワードを入力" minlength="8" maxlength="16" required class="u-mb__10 @if(!empty($errors->first('current_password'))) error @endif">
-            <input type="password" name="password" placeholder="あたらしいパスワードを入力（半角英数字記号 8~16文字）" minlength="8" maxlength="16" required class="u-mb__10 @if(!empty($errors->first('password'))) error @endif">
-            <input type="password" name="password_confirmation" placeholder="あたらしいパスワードを再入力" minlength="8" maxlength="16" required class="u-mb__50">
+            <input type="password" name="current_password" placeholder="現在のぱすわーどを入力" minlength="8" maxlength="16" required class="u-mb__10 @if(!empty($errors->first('current_password'))) error @endif">
+            <input type="password" name="password" placeholder="あたらしいぱすわーどを入力（半角英数字記号 8~16文字）" minlength="8" maxlength="16" required class="u-mb__10 @if(!empty($errors->first('password'))) error @endif">
+            <input type="password" name="password_confirmation" placeholder="あたらしいぱすわーどを再入力" minlength="8" maxlength="16" required class="u-mb__50">
             <!-- エラーテキスト -->
             @if($errors->any())
                 <ul class="c-error u-mb__50">

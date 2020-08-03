@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'のきろく')
+@section('title', '{{ $record->record_name }}のきろく')
 
 @section('content')
 

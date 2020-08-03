@@ -6,7 +6,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- description -->
-    <meta name="description" content="日頃なんとなくしている&quot;こつこつ&quot;をきろくして日常のがんばりを実感！積み重ねることで自然と自信がついてきます。">
+    <meta name="description" content="日頃なんとなくしている&quot;こつこつ&quot;をきろくして日常のがんばりを実感！積み重ねることで自然と自信がついてくる気がします！">
     <!-- keyword -->
     <meta name=”keywords” content=”自己啓発,積み上げ,リスト”>
     <!-- title -->
