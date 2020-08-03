@@ -7,7 +7,7 @@
             <p>こつこつ数：{{ items.length }}</p>
             <form action="/kotunote/everyone/user" method="GET" name="user">
                 <input type="hidden" name="user_id" :value="record.user_id">
-                <p>ユーザー名：
+                <p>ゆーざー名：
                     <a href="javascript:user.submit()" class="u-hover">{{ record.user.name }}</a>
                 </p>
             </form>
@@ -17,7 +17,7 @@
             <!-- ソート -->
             <ul v-if="years.length" class="u-dp__flex u-mb__30">
                 <li v-on:click="clearSelectYear" class="u-mr__50">
-                    <p class="u-c__blue u-hover">ぜんぶ</p>
+                    <p class="u-c__blue u-hover">all</p>
                 </li>
                 <li v-for="(year,id) in years" :key="id" v-on:click="setSelectYear(year)" class="u-mr__50">
                     <p class="u-c__blue u-hover">{{ year }}</p>
