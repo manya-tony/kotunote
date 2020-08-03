@@ -26,8 +26,8 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@kotukotu-note">
-    <meta property="og:url" content="https://chikichiki-tony.sakura.ne.jp/kotunote/everyone/{{ $record->id }}/items">
-    <meta property="og:title" content="{{ $record->user->name }}さんの{{ $record->record_name }}のきろく | こつこつのーと">
+    <meta property="og:url" content="https://chikichiki-tony.sakura.ne.jp/kotunote/">
+    <meta property="og:title" content="こつこつのーと">
     <meta property="og:description" content="なにげなくしているこつこつをきろくしてみる">
     <meta property="og:image" content="images/twitter_card.png">
 </head>
