@@ -29,7 +29,7 @@
     <meta property="og:url" content="https://chikichiki-tony.sakura.ne.jp/kotunote/">
     <meta property="og:title" content="こつこつのーと">
     <meta property="og:description" content="なにげなくしているこつこつをきろくしてみる">
-    <meta property="og:image" content="images/twitter_card.png">
+    <meta property="og:image" content="https://chikichiki-tony.sakura.ne.jp/kotunote/images/twitter_card.png">
 </head>
 <body>
 <div class="wrapper">

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'こつこつぐあい')
+@section('title')
+{{ $record->record_name }}のきろく@endection
 
 @section('content')
 
