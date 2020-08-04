@@ -61,3 +61,20 @@
     @endif
 
 @endsection
+
+@section('script')
+    $(function(){
+        var h = 0,
+            $card = $(".c-record__other a");
+
+        $card.each(function(){
+            $this = $(this);
+            
+            if($this.height() > h) {
+                h = $this.height();
+            }
+            
+            $card.css("height", h + "px");
+        });
+    });
+@endsection
