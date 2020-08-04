@@ -62,7 +62,7 @@
 
 @endsection
 
-@section('script')
+@push('script')
     $(function(){
         var h = 0,
             $card = $(".c-record__other a");
@@ -78,4 +78,4 @@
 
         $card.css("height", h + "px");
     });
-@endsection
+@endpush
