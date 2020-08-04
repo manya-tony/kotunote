@@ -93,7 +93,7 @@
                             <div v-on:click="deleteItem" class="p-item__modal--icon -trash">
                                 <i class="fas fa-trash-alt"></i>
                             </div>
-                            <a :href="`http://twitter.com/share?text=【${record.record_name}のきろく】%0a${checkText}%0a&url=https://chikichiki-tony.sakura.ne.jp/kotunote/everyone/${record.id}/items&hashtags=今日もこつこつ`" target="__blank" class="p-item__modal--icon -twitter">
+                            <a :href="`http://twitter.com/share?hashtags=今日もこつこつ&text=${record.record_name}のきろく%0a%0a${checkText}%0a%0a&url=https://chikichiki-tony.sakura.ne.jp/kotunote/everyone/${record.id}/items`" target="__blank" class="p-item__modal--icon -twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </div>
