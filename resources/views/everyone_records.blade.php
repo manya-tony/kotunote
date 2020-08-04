@@ -74,7 +74,8 @@
                 h = $this.height();
             }
             
-            $card.css("height", h + "px");
         });
+
+        $card.css("height", h + "px");
     });
 @endsection
