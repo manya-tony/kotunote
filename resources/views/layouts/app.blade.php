@@ -24,12 +24,7 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@kotukotu-note">
-    <meta property="og:url" content="https://chikichiki-tony.sakura.ne.jp/kotunote/">
-    <meta property="og:title" content="こつこつのーと">
-    <meta property="og:description" content="なにげなくしているこつこつをきろくしてみる">
-    <meta property="og:image" content="https://chikichiki-tony.sakura.ne.jp/kotunote/images/twitter_card.png">
+    @stack('twitter')
 </head>
 <body>
 <div class="wrapper">
