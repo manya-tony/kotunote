@@ -64,19 +64,18 @@
 
 @push('script')
 <script>
-    $(function(){
-        var h = 0,
-            $card = $(".c-record__other a");
+$(function(){
+    var h = 0,
+        $card = $(".c-record__other a");
 
-            $(window).on('load resize', function(){
-                $card.each(function(){
-                    if($(this).outerHeight() > h) {
-                        h = $(this).outerHeight();
-                    }
-                });
+        $(window).on('load', function(){
+            $card.each(function(){
+                if($card.outerHeight() > h) {
+                    h = $card.outerHeight();
+                }
             });
-
-        $card.css("height", h + "px");
-    });
+            $card.css({height:h});
+        });
+});
 </script>
 @endpush
