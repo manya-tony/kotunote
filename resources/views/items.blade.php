@@ -5,7 +5,6 @@
 
 @push('twitter')
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@kotukotu-note">
 <meta property="og:url" content="https://chikichiki-tony.sakura.ne.jp/kotunote/everyone/{{ $record->id }}/items">
 <meta property="og:title" content="こつこつのーと">
 <meta property="og:description" content="なにげなくしているこつこつをきろくしてみる">
