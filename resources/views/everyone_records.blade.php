@@ -68,14 +68,13 @@
         var h = 0,
             $card = $(".c-record__other a");
 
-        $card.each(function(){
-            $this = $(this);
-            
-            if($this.height() > h) {
-                h = $this.height();
-            }
-            
-        });
+            $(window).on('load resize', function(){
+                $card.each(function(){
+                    if($(this).outerHeight() > h) {
+                        h = $(this).outerHeight();
+                    }
+                });
+            });
 
         $card.css("height", h + "px");
     });
