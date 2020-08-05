@@ -3,14 +3,14 @@
 @section('title')
 {{ $record->record_name }}のきろく@endsection
 
-<!-- @push('twitter')
+@push('twitter')
 <meta name="twitter:card" content="summary">
 <meta property="og:url" content="https://chikichiki-tony.sakura.ne.jp/kotunote/everyone/{{ $record->id }}/items">
 <meta property="og:title" content="こつこつのーと">
 <meta property="og:description" content="なにげなくしているこつこつをきろくしてみる">
 <meta property="og:image" content="https://chikichiki-tony.sakura.ne.jp/kotunote/images/twitter_card.png">
 <meta property="og:type" content="website">
-@endpush -->
+@endpush
 
 @section('content')
 
