@@ -43,17 +43,7 @@
                     <a href="{{ route('top') }}" class="u-hover">kotukotu-note</a>
                 @endif
             </h1>
-            @if(Auth::check())
-                <!-- ナビゲーション ろぐいん後-->
-                <ul class="l-header__nav">
-                    <li>
-                        <form action="{{ route('logout') }}" method="POST" name="logout">
-                            @csrf
-                            <a href="javascript:logout.submit()" class="u-hover">ろぐあうと</a>
-                        </form>
-                    </li>
-                </ul>
-            @else
+            @if(!Auth::check())
                 <!-- ナビゲーション ろぐいん前-->
                 <ul class="l-header__nav">
                     <li class="u-mr__40"><a href="{{ route('login') }}" class="u-hover">ろぐいん</a></li>
@@ -88,6 +78,12 @@
                 <li><a href="{{ route('records.create') }}" class="u-hover">あたらしいきろく</a></li>
                 <li><a href="{{ route('mypage.profile') }}" class="u-hover">ぷろふぃーる編集</a></li>
                 <li><a href="{{ route('mypage.password') }}" class="u-hover">ぱすわーど変更</a></li>
+                <li>
+                    <form action="{{ route('logout') }}" method="POST" name="logout">
+                        @csrf
+                        <a href="javascript:logout.submit()" class="u-hover">ろぐあうと</a>
+                    </form>
+                </li>
                 <li><a href="{{ route('mypage.unsubscribe') }}" class="u-hover">退会</a></li>
                 <li><a href="{{ route('everyone.records') }}" class="u-hover">みんなのきろく</a></li>
                 <li><a href="{{ route('contact') }}" class="l-footer__navLink u-hover">つくったひと</a></li>
