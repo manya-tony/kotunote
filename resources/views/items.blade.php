@@ -9,6 +9,7 @@
 <meta property="og:title" content="こつこつのーと">
 <meta property="og:description" content="なにげなくしているこつこつをきろくしてみる">
 <meta property="og:image" content="https://chikichiki-tony.sakura.ne.jp/kotunote/images/twitter_card.png">
+<meta property="og:type" content="website">
 @endpush
 
 @section('content')
